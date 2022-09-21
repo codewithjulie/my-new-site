@@ -14,17 +14,6 @@
   --action-color: #d64045;
 }
 
-body {
-  background: var(--body-background);
-  color: var(--body-color);
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    "Helvetica", "Arial", sans-serif;
-  margin: 0 8px;
-  font-size: 108%;
-  line-height: 1.5;
-}
-
 a {
   color: var(--action-color);
   text-decoration: underline;
@@ -64,26 +53,6 @@ body > nav ul {
 
 body > nav a {
   text-decoration: none;
-}
-
-main {
-  margin: 2rem auto 2rem;
-  max-width: 65rem;
-  min-height: calc(100vh - 200px);
-  padding: 25px 25px 50px;
-  background: white;
-  box-shadow: 2px 3px 3px #ddd;
-  border-radius: 3px;
-
-  @media (max-width: 500px) {
-    padding: 16px 16px 50px;
-  }
-}
-
-footer {
-  text-align: center;
-  margin-bottom: 4rem;
-  font-size: 1em;
 }
 
 hr {
