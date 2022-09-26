@@ -1,5 +1,5 @@
 ---
-main: "bg-gray-100 dark:bg-gray-800 shadow-sm p-4 md:py-12 rounded max-w-5xl mt-8 mx-auto mb-16"
+main: "bg-gray-100 dark:bg-zinc-800 shadow-sm p-4 md:py-12 rounded max-w-5xl mt-8 mx-auto mb-16 "
 ---
 
 <!doctype html>
@@ -7,7 +7,7 @@ main: "bg-gray-100 dark:bg-gray-800 shadow-sm p-4 md:py-12 rounded max-w-5xl mt-
   <head>
     <%= render "head", metadata: site.metadata, title: resource.data.title %>
   </head>
-  <body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-50 font-sans mx-2 leading-6">
+  <body class="bg-gray-300 text-gray-900 dark:bg-black dark:text-gray-50 font-sans mx-2 leading-6">
     <%= render Shared::Navbar.new(metadata: site.metadata, resource: resource) %>
 
     <main class="<%= layout.data.main %>">
