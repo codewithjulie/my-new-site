@@ -1,8 +1,54 @@
-<nav class="rounded max-w-5xl mx-auto mt-8">
-  <ul class="mx-8 my-4 p-0 list-none flex justify-end gap-6 text-xl font-bold">
-    <li><a class="text-purple-600 dark:text-fuchsia-600 hover:text-fuchsia-500 dark:hover:text-purple-600 cursor-pointer no-underline" href="<%= relative_url '/' %>">Home</a></li>
-    <li><a class="text-purple-600 dark:text-fuchsia-600 hover:text-fuchsia-500 dark:hover:text-purple-600 cursor-pointer no-underline" href="<%= relative_url '/about' %>">About Me</a></li>
-    <li><a class="text-purple-600 dark:text-fuchsia-600 hover:text-fuchsia-500 dark:hover:text-purple-600 cursor-pointer no-underline" href="<%= relative_url '/projects' %>">Projects</a></li>
-    <li><a class="text-purple-600 dark:text-fuchsia-600 hover:text-fuchsia-500 dark:hover:text-purple-600 cursor-pointer no-underline" href="<%= relative_url '/community' %>">Community</a></li>
-  </ul>
+<nav class="rounded max-w-5xl mx-auto mt-8 flex justify-end">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between">
+      <div class="flex space-x-7">
+
+        <!-- Primary Navbar items -->
+        <div class="hidden md:flex space-x-1">
+          <ul class="mx-8 my-4 p-0 list-none flex gap-6 text-xl font-bold">
+            <li><a class="text-purple-600 dark:text-fuchsia-600 hover:text-fuchsia-500 dark:hover:text-purple-600 cursor-pointer no-underline" href="<%= relative_url '/' %>">Home</a></li>
+            <li><a class="text-purple-600 dark:text-fuchsia-600 hover:text-fuchsia-500 dark:hover:text-purple-600 cursor-pointer no-underline" href="<%= relative_url '/about' %>">About Me</a></li>
+            <li><a class="text-purple-600 dark:text-fuchsia-600 hover:text-fuchsia-500 dark:hover:text-purple-600 cursor-pointer no-underline" href="<%= relative_url '/projects' %>">Projects</a></li>
+            <li><a class="text-purple-600 dark:text-fuchsia-600 hover:text-fuchsia-500 dark:hover:text-purple-600 cursor-pointer no-underline" href="<%= relative_url '/community' %>">Community</a></li>
+          </ul>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button class="outline-none mobile-menu-button">
+            <svg class=" w-6 h-6 text-purple-600 dark:text-fuchsia-600 hover:text-fuchsia-500 dark:hover:text-purple-600 "
+              x-show="!showMenu"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- mobile menu -->
+  <div class="md:hidden mobile-menu">
+    <ul class="">
+      <li class="active"><a class="text-purple-600 dark:text-fuchsia-600 hover:text-fuchsia-500 dark:hover:text-purple-600 cursor-pointer no-underline" href="<%= relative_url '/' %>">Home</a></li>
+      <li><a class="text-purple-600 dark:text-fuchsia-600 hover:text-fuchsia-500 dark:hover:text-purple-600 cursor-pointer no-underline" href="<%= relative_url '/about' %>">About Me</a></li>
+      <li><a class="text-purple-600 dark:text-fuchsia-600 hover:text-fuchsia-500 dark:hover:text-purple-600 cursor-pointer no-underline" href="<%= relative_url '/projects' %>">Projects</a></li>
+      <li><a class="text-purple-600 dark:text-fuchsia-600 hover:text-fuchsia-500 dark:hover:text-purple-600 cursor-pointer no-underline" href="<%= relative_url '/community' %>">Community</a></li>
+    </ul>
+  </div>
+  <script>
+    // Grab HTML Elements
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+
+    // Add Event Listeners
+    btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+    });
+  </script>
 </nav>
